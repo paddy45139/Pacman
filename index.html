@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEON MAZE</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <div id="hud">
+      <div class="hud-item"><span class="label">SCORE</span><span id="score">0</span></div>
+      <div class="hud-item"><span class="label">HIGH SCORE</span><span id="high">0</span></div>
+      <div class="hud-item"><span class="label">LEVEL</span><span id="level">1</span></div>
+      <div class="hud-item"><span class="label">LIVES</span><span id="lives"></span></div>
+    </div>
+    <div id="stage">
+      <canvas id="game"></canvas>
+
+      <div id="menu" class="overlay">
+        <h1 class="title">NEON MAZE</h1>
+        <canvas id="menu-art" width="320" height="60"></canvas>
+        <button id="start-btn" class="btn">START GAME</button>
+        <div class="controls">
+          <p><b>ARROWS / WASD</b> MOVE</p>
+          <p><b>P / ESC</b> PAUSE</p>
+          <p><b>ENTER</b> START</p>
+        </div>
+      </div>
+
+      <div id="pause" class="overlay hidden">
+        <h2>PAUSED</h2>
+        <p class="hint">PRESS P OR ESC TO RESUME</p>
+      </div>
+
+      <div id="gameover" class="overlay hidden">
+        <h2 class="danger">GAME OVER</h2>
+        <div class="stats">
+          <p>SCORE <span id="final-score">0</span></p>
+          <p>HIGH SCORE <span id="final-high">0</span></p>
+          <p>LEVEL REACHED <span id="final-level">1</span></p>
+        </div>
+        <button id="restart-btn" class="btn">PLAY AGAIN</button>
+        <p class="hint">OR PRESS ENTER</p>
+      </div>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
